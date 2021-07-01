@@ -390,14 +390,18 @@ function enableVRUI(viewer, enabled) {
  */
 function Viewer(container, options) {
   //>>includeStart('debug', pragmas.debug);
+  // 这一步，是看看DOM元素是否存在，使用getElement模块判断是domID或者是DOM元素变量，并返回。
   if (!defined(container)) {
     throw new DeveloperError("container is required.");
   }
   //>>includeEnd('debug');
 
   container = getElement(container);
+  // 这一步是判断传进来的options对象是否为空，如果为空，那就使用空对象预设值（defaultValue.EMPTY_OBJECT））。其中，defaultValue是一个重要的模块，
+  // 它判断第一个参数如果是undefined，就把第二个参数作为它的值返回，如果不是undefined，那就返回它本身
   options = defaultValue(options, defaultValue.EMPTY_OBJECT);
-
+  // 这一步通过defined模块判断构造参数options是否有globe属性、baseLayerPicker属性来决定是否创建底图选择器控件。
+  // defined模块的作用就是，判断传入值是否定义，定义了就返回true。
   var createBaseLayerPicker =
     (!defined(options.globe) || options.globe !== false) &&
     (!defined(options.baseLayerPicker) || options.baseLayerPicker !== false);
@@ -442,9 +446,9 @@ Either specify options.terrainProvider instead or set options.baseLayerPicker to
   bottomContainer.className = "cesium-viewer-bottom";
 
   viewerContainer.appendChild(bottomContainer);
-
+  // 判断传入参数options中scene3DOnly参数是否赋值，如果没有则默认为false，即是否仅使用3d场景的意思；
   var scene3DOnly = defaultValue(options.scene3DOnly, false);
-
+  // 判断传入参数options中的时钟模型属性clockViewModel是否存在，来决定是用传入的时钟模型，亦或者是用系统的时钟模型；
   var clock;
   var clockViewModel;
   var destroyClockViewModel = false;
@@ -456,7 +460,7 @@ Either specify options.terrainProvider instead or set options.baseLayerPicker to
     clockViewModel = new ClockViewModel(clock);
     destroyClockViewModel = true;
   }
-
+  // 判断传入参数options中是否定义了shouldAnimate属性，如果定义了，则将时钟的同名属性设为同样的值。
   if (defined(options.shouldAnimate)) {
     clock.shouldAnimate = options.shouldAnimate;
   }

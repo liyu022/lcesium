@@ -12,7 +12,7 @@ const request = require("request");
 
 const globby = require("globby");
 const gulpTap = require("gulp-tap");
-const gulpUglify = require("gulp-uglify");
+const gulpUglify = require("gulp-uglify"); //压缩js文件
 const open = require("open");
 const rimraf = require("rimraf");
 const glslStripComments = require("glsl-strip-comments");
@@ -46,8 +46,8 @@ const karmaConfigFile = path.join(__dirname, "Specs/karma.conf.cjs");
 const travisDeployUrl =
   "http://cesium-dev.s3-website-us-east-1.amazonaws.com/cesium/";
 
-//Gulp doesn't seem to have a way to get the currently running tasks for setting
-//per-task variables.  We use the command line argument here to detect which task is being run.
+//Gulp 没有办法获取当前正在运行的任务以进行设置
+//per-task 我们在这里使用命令行参数来检测正在运行的任务。
 const taskName = process.argv[2];
 const noDevelopmentGallery =
   taskName === "release" || taskName === "makeZipFile";
@@ -62,6 +62,7 @@ const verbose = yargs.argv.verbose;
 
 let concurrency = yargs.argv.concurrency;
 if (!concurrency) {
+  // 返回一个对象数组，其中包含有关每个逻辑 CPU 内核的信息及长度。
   concurrency = os.cpus().length;
 }
 
@@ -174,7 +175,10 @@ function createWorkers() {
       rimraf.sync("Build/createWorkers");
     });
 }
-
+/// 每个 gulp 任务（task）都是一个异步的 JavaScript 函数，此函数是一个可以接收 callback 作为参数的函数，或者是一个返回 stream、promise、event emitter、child process 或 observable (后面会详细讲解) 类型值的函数。
+/// gulp.task方法用来定义任务，内部使用的是Orchestratorname: 为任务名
+// deps: 是当前定义的任务需要依赖的其他任务，为一个数组。当前定义的任务会在所有依赖的任务执行完毕后才开始执行。如果没有依赖，则可省略这个参数
+// fn: 为任务函数，我们把任务要执行的代码都写在里面，是当前任务的实际处理逻辑。该参数也是可选的。
 gulp.task("build", function () {
   mkdirp.sync("Build");
   fs.writeFileSync(

@@ -18,17 +18,16 @@ function callAndWrap(workerFunction, parameters, transferableObjects) {
 }
 
 /**
- * Creates an adapter function to allow a calculation function to operate as a Web Worker,
- * paired with TaskProcessor, to receive tasks and return results.
+ * 创建适配器功能以允许计算功能作为Web Worker进行操作，与TaskProcessor配对使用，以接收任务并返回结果。
  *
  * @function createTaskProcessorWorker
  *
- * @param {createTaskProcessorWorker.WorkerFunction} workerFunction The calculation function,
+ * @param {createTaskProcessorWorker.WorkerFunction} workerFunction 计算功能，它接受参数并返回结果,
  *        which takes parameters and returns a result.
  * @returns {createTaskProcessorWorker.TaskProcessorWorkerFunction} A function that adapts the
  *          calculation function to work as a Web Worker onmessage listener with TaskProcessor.
  *
- *
+ * 
  * @example
  * function doCalculation(parameters, transferableObjects) {
  *   // calculate some result using the inputs in parameters

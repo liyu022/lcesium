@@ -1,10 +1,12 @@
-Copyright 2011-2020 CesiumJS Contributors
+版权所有2011-2020 CesiumJS贡献者
 
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+Apache许可证
 
-TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+版本2.0，2004年1月
+
+http://www.apache.org/licenses/
+
+使用、复制和分发的条款和条件
 
 1.  Definitions.
 
@@ -25,41 +27,18 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
     "You" (or "Your") shall mean an individual or Legal Entity
     exercising permissions granted by this License.
 
-    "Source" form shall mean the preferred form for making modifications,
-    including but not limited to software source code, documentation
-    source, and configuration files.
+    "Source" 表格应指进行修改的首选表格，包括但不限于软件源代码、文档源文件和配置文件。
 
-    "Object" form shall mean any form resulting from mechanical
-    transformation or translation of a Source form, including but
-    not limited to compiled object code, generated documentation,
-    and conversions to other media types.
+    "Object" 形式是指由机械力引起的任何形式源形式的转换或翻译，包括但不限于不限于编译的目标代码，生成的文档，以及转换为其他媒体类型。
 
-    "Work" shall mean the work of authorship, whether in Source or
-    Object form, made available under the License, as indicated by a
-    copyright notice that is included in or attached to the work
-    (an example is provided in the Appendix below).
+    "Work" 是指作者的作品，无论是源作品还是源作品对象形式，在许可证下可用，如
+包含在作品中或附在作品上的版权声明（下面的附录中提供了一个示例）
+    "Derivative Works" 是指任何作品，无论是源作品还是目标作品形式，即以作品为基础（或源于作品）的形式编辑修订、注释、详细说明或其他修改作为一个整体，代表作者的原创作品。出于以下目的
+在本许可证中，衍生作品不包括保留的作品与…的接口分离的，或仅仅与…的接口相连的，作品及其衍生作品。
 
-    "Derivative Works" shall mean any work, whether in Source or Object
-    form, that is based on (or derived from) the Work and for which the
-    editorial revisions, annotations, elaborations, or other modifications
-    represent, as a whole, an original work of authorship. For the purposes
-    of this License, Derivative Works shall not include works that remain
-    separable from, or merely link (or bind by name) to the interfaces of,
-    the Work and Derivative Works thereof.
+    "Contribution" 是指任何作者的作品，包括原版作品及任何修改或增补该作品或其衍生作品
 
-    "Contribution" shall mean any work of authorship, including
-    the original version of the Work and any modifications or additions
-    to that Work or Derivative Works thereof, that is intentionally
-    submitted to Licensor for inclusion in the Work by the copyright owner
-    or by an individual or Legal Entity authorized to submit on behalf of
-    the copyright owner. For the purposes of this definition, "submitted"
-    means any form of electronic, verbal, or written communication sent
-    to the Licensor or its representatives, including but not limited to
-    communication on electronic mailing lists, source code control systems,
-    and issue tracking systems that are managed by, or on behalf of, the
-    Licensor for the purpose of discussing and improving the Work, but
-    excluding communication that is conspicuously marked or otherwise
-    designated in writing by the copyright owner as "Not a Contribution."
+提交给许可方，由版权所有人包含在作品中或由授权代表版权所有人。就本定义而言，“已提交”指发送的任何形式的电子、口头或书面通信许可方或其代表，包括但不限于电子邮件列表、源代码控制系统上的通信，以及由或代表为了讨论和改进工作不包括明显标记或其他方式的通信由著作权人书面指定为“非贡献
 
     "Contributor" shall mean Licensor and any individual or Legal Entity
     on behalf of whom a Contribution has been received by Licensor and
